@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #d63384;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        #no {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        #yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi San Valentín? 💖</h1>
+    <p>¡Elige sabiamente!</p>
+    <div class="buttons">
+        <button id="no" onclick="shrinkNo()">No</button>
+        <button id="yes" onclick="growYes()">Sí</button>
+    </div>
+
+    <script>
+        let noSize = 1; // Escala inicial para el botón "No"
+        let yesSize = 1; // Escala inicial para el botón "Sí"
+
+        function shrinkNo() {
+            noSize *= 0.8; // Reduce el tamaño del "No" en un 20% cada vez
+            yesSize *= 1.2; // Aumenta el tamaño del "Sí" en un 20% cada vez
+            document.getElementById('no').style.transform = `scale(${noSize})`;
+            document.getElementById('yes').style.transform = `scale(${yesSize})`;
+        }
+
+        function growYes() {
+            // Redirige a la página de éxito
+            window.location.href = 'success.html';
+        }
+    </script>
+</body>
+</html>
