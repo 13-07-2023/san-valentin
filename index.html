@@ -16,6 +16,12 @@
         h1 {
             font-size: 2em; /* Relativo */
         }
+        img {
+            max-width: 80%; /* Ajusta al 80% del ancho del contenedor */
+            height: auto; /* Mantiene la proporción */
+            margin-bottom: 1rem; /* Espacio debajo de la imagen */
+            border-radius: 10px; /* Bordes redondeados opcionales */
+        }
         .buttons {
             margin-top: 1.5rem; /* Relativo */
         }
@@ -59,7 +65,7 @@
         <button id="no" onclick="shrinkNo()">No</button>
         <button id="yes" onclick="growYes()">Sí</button>
     </div>
-
+    <img src="tu-imagen.jpg" alt="michi">
     <script>
         let noSize = 1; // Escala inicial para el botón "No"
         let yesSize = 1; // Escala inicial para el botón "Sí"
@@ -77,4 +83,5 @@
         }
     </script>
 </body>
+
 </html>
